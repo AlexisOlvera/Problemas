@@ -99,3 +99,22 @@ int main(){__
 	cout<<"\n";
 	return 0;
 }
+
+int main(){__
+	int n;
+	cin>>n;
+	llim s;
+	c[0]+=2*n-1;
+	for(llim i=1; i<n; i++)
+		for(llim j=1; j<=i; j++){
+			s = ((i%n)*(j%n))%n;
+			if(i==j)	
+				c[s]++;
+			else
+				c[s]+=2;
+		}
+	forn(i, n)
+		cout<<c[i]<<" ";
+	cout<<"\n";
+
+}
